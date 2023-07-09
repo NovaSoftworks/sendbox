@@ -4,6 +4,7 @@ Sendbox is a lightweight Scala library that facilitates sending emails built on 
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Scala version](https://img.shields.io/badge/scala-2.12.12-red.svg)](https://www.scala-lang.org/)
+[![GitHub CI](https://github.com/NovaSoftworks/sendbox/actions/workflows/ci.yml/badge.svg)](https://github.com/NovaSoftworks/sendbox/actions/workflows/ci.yml)
 [![Documentation](https://img.shields.io/badge/docs-latest-brightgreen.svg)][documentation]
 
 ## Why?
