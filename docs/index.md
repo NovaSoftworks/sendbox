@@ -22,7 +22,7 @@ Sendbox is a lightweight Scala library that simplifies email sending by providin
 
 ## Getting Started
 
-To get started with Sendbox, follow the installation and usage instructions in the [Getting Started] guide. It will walk you through the steps of installing Sendbox, configuring your SMTP settings, and sending your first email using the library.
+To get started with Sendbox, follow the installation and usage instructions in the [Getting Started] page. It will walk you through the steps of installing Sendbox, configuring your SMTP settings, and sending your first email using the library.
 
 ## About the Project
 
