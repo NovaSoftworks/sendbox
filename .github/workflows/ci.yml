@@ -28,21 +28,21 @@ jobs:
         distribution: "temurin"
         cache: "sbt"
     - name: Build
-      run: sbt test 
+      run: sbt compile 
     - name: Test
       run: sbt test 
-    - name: CheckCoverage
+    - name: Check coverage
       run: sbt coverageReport
     - name: Package
       run: sbt package
-    - name: UploadBuild
+    - name: Upload build
       uses: actions/upload-artifact@v3.1.2
       with:
         name: packaged-jar
         path: target/scala-2.12/*.jar
         error: No JAR found
         retention-days: 30
-    - name: UploadCoverageReport
+    - name: Upload coverage report
       uses: actions/upload-artifact@v3.1.2
       with:
         name: coverage-report
@@ -54,12 +54,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build]
     steps:
-    - name: DownloadBuild
+    - name: Download build
       uses: actions/download-artifact@v3
       with:
         name: packaged-jar
-    - name: Print wd
-      run: pwd
     - name: List files in wd
       run: ls -R
     - name: Fake deploy
