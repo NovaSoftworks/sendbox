@@ -33,8 +33,8 @@ import com.novasoftworks.sendbox.smtp.SmtpConfig
 val sendbox = Sendbox(SmtpConfig(
   host = "smtp.example.com",
   port = 587,
-  username = "your_username",
-  password = "your_password"
+  username = Some("your_username"),
+  password = Some("your_password")
 ))
 
 // Send an email
