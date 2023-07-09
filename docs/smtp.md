@@ -28,7 +28,7 @@ The `SmtpConfig` class is used to configure the SMTP settings for the Sendbox in
 - `port`: The SMTP server port.
 - `username`: (Optional) The username for SMTP authentication.
 - `password`: (Optional) The password for SMTP authentication.
-- `timeout`: (Optional) The timeout for SMTP operations (default is 1000 milliseconds).
+- `timeout`: The timeout for SMTP operations (default is 1000 milliseconds).
 
 ### Example Usage
 
@@ -38,8 +38,8 @@ Here's an example of configuring the SMTP settings using `SmtpConfig`:
 val smtpConfig = SmtpConfig(
   host = "smtp.example.com",
   port = 587,
-  username = "your_username",
-  password = "your_password",
+  username = Some("your_username"),
+  password = Some("your_password"),
   timeout = 2000
 )
 ```
