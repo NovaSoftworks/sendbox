@@ -1,0 +1,19 @@
+title: Sendbox
+description: A lightweight library to send emails with Scala
+theme: just-the-docs
+
+url: https://novasoftworks.github.io/sendbox
+
+search_enabled: false
+
+aux_links:
+  GitHub: https://github.com/NovaSoftworks/sendbox
+aux_links_new_tab: true
+
+callouts:
+  warning:
+    title: Warning
+    color: red
+  info:
+    title: Information
+    color: blue
