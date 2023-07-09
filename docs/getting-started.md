@@ -7,6 +7,17 @@ description: "Get started with Sendbox with a step by step example."
 
 # Getting Started with Sendbox
 
+---
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+---
+
 This guide will walk you through the process of getting started with Sendbox - a lightweight email sending library for Scala.
 
 ## Installation

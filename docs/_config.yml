@@ -6,6 +6,8 @@ url: https://novasoftworks.github.io/sendbox
 
 search_enabled: false
 
+color_scheme: orange
+
 aux_links:
   GitHub: https://github.com/NovaSoftworks/sendbox
 aux_links_new_tab: true

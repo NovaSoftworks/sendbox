@@ -7,6 +7,17 @@ description: "All you need to know about using SMTP with Sendbox."
 
 # SMTP Configuration
 
+---
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+---
+
 Sendbox provides a simple and flexible way to configure SMTP settings for sending emails. This guide will walk you through the available configuration options.
 
 ## SmtpConfig
