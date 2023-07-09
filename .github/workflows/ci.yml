@@ -40,14 +40,14 @@ jobs:
       with:
         name: packaged-jar
         path: target/scala-2.12/*.jar
-        error: No JAR found
+        if-no-files-found: error
         retention-days: 30
     - name: Upload coverage report
       uses: actions/upload-artifact@v3.1.2
       with:
         name: coverage-report
         path: target/scala-2.12/coverage-report/
-        error: No coverage report found
+        if-no-files-found: error
         retention-days: 30
       
   deploy:
