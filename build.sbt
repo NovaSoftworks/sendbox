@@ -2,8 +2,12 @@ ThisBuild / scalaVersion := "2.12.12"
 ThisBuild / organization := "com.novasoftworks.sendbox"
 
 lazy val root = (project in file(".")).settings(
-  name    := "sendbox-core",
-  version := "0.1-SNAPSHOT",
+  name                       := "sendbox-core",
+  version                    := "0.1-SNAPSHOT",
+  coverageEnabled            := true,
+  coverageFailOnMinimum      := true,
+  coverageMinimumStmtTotal   := 70,
+  coverageMinimumBranchTotal := 90,
   libraryDependencies ++= Seq(
     "com.sun.mail"   % "jakarta.mail"     % "2.0.1",
     "jakarta.mail"   % "jakarta.mail-api" % "2.1.2",
