@@ -65,9 +65,13 @@ jobs:
       uses: actions/download-artifact@v3
       with:
         name: build
+    - name: Unpack build
+      run: |
+        tar xf targets.tar
+        rm targets.tar
     - name: List files in wd
       run: ls -R
-    - name: Fake deploy
+    - name: Publish
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: echo Not actually deploying...
+      run: sbt publish
