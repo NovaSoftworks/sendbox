@@ -13,7 +13,7 @@ class EmailSpec extends AnyFlatSpec with Matchers {
       subject = "Hello",
       body = "This is the body of the email",
       cc = Some("cc@example.com"),
-      cci = Some("cci@example.com")
+      bcc = Some("bcc@example.com")
     )
 
     email.from shouldEqual "sender@example.com"
@@ -21,24 +21,39 @@ class EmailSpec extends AnyFlatSpec with Matchers {
     email.subject shouldEqual "Hello"
     email.body shouldEqual "This is the body of the email"
     email.cc shouldBe Some("cc@example.com")
-    email.cci shouldBe Some("cci@example.com")
+    email.bcc shouldBe Some("bcc@example.com")
   }
 
   it should "throw IllegalArgumentException when 'from' is empty" in {
     assertThrows[IllegalArgumentException] {
-      Email(from = "", to = "recipient@example.com", subject = "Hello", body = "This is the body of the email")
+      Email(
+        from = "",
+        to = "recipient@example.com",
+        subject = "Hello",
+        body = "This is the body of the email"
+      )
     }
   }
 
   it should "throw IllegalArgumentException when 'to' is empty" in {
     assertThrows[IllegalArgumentException] {
-      Email(from = "sender@example.com", to = "", subject = "Hello", body = "This is the body of the email")
+      Email(
+        from = "sender@example.com",
+        to = "",
+        subject = "Hello",
+        body = "This is the body of the email"
+      )
     }
   }
 
   it should "throw IllegalArgumentException when 'subject' is empty" in {
     assertThrows[IllegalArgumentException] {
-      Email(from = "sender@example.com", to = "recipient@example.com", subject = "", body = "This is the body of the email")
+      Email(
+        from = "sender@example.com",
+        to = "recipient@example.com",
+        subject = "",
+        body = "This is the body of the email"
+      )
     }
   }
 

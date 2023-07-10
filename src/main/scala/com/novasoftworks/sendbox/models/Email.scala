@@ -1,7 +1,5 @@
 package com.novasoftworks.sendbox.models
 
-import scala.util.{Try, Success, Failure}
-
 /** Represents an email message.
   *
   * @param from
@@ -15,8 +13,8 @@ import scala.util.{Try, Success, Failure}
   * @param cc
   *   The email addresses to be included in the "cc" (carbon copy) field (comma-separated,
   *   optional).
-  * @param cci
-  *   The email addresses to be included in the "cci" (blind carbon copy) field (comma-separated,
+  * @param bcc
+  *   The email addresses to be included in the "bcc" (blind carbon copy) field (comma-separated,
   *   optional).
   */
 final case class Email(
@@ -25,7 +23,7 @@ final case class Email(
     subject: String,
     body: String,
     cc: Option[String] = None,
-    cci: Option[String] = None
+    bcc: Option[String] = None
 ) {
   require(from.nonEmpty, "Sender email address must not be empty.")
   require(to.nonEmpty, "Recipient email address must not be empty.")
