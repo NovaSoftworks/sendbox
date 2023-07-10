@@ -13,8 +13,9 @@ on:
     branches: [ "main" ]
     paths-ignore: ["docs/**", "**/README.md"]
 
-permissions:
-  contents: read
+# Use this to whitelist permissions of the GITHUB_TOKEN for this workflow. All non-specified will be considered forbidden.
+#permissions:
+#  contents: read
 
 jobs:
   build:
