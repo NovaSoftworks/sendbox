@@ -29,7 +29,9 @@ lazy val root = (project in file(".")).settings(
   pomIncludeRepository   := { _ => true },
 
   // Artifact metadata
-  pomExtra := <url>https://github.com/NovaSoftworks/sendbox</url>
+  pomExtra :=
+    <description>A simple and intuitive Scala library for seamless email sending. </description>
+    <url>https://github.com/NovaSoftworks/sendbox</url>
     <licenses>
       <license>
         <name>MIT</name>
