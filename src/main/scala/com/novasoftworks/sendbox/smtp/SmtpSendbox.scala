@@ -34,6 +34,8 @@ class SmtpSendbox(val smtpTransport: SmtpTransport, val smtpConfig: SmtpConfig) 
     message.setSubject(email.subject)
     message.setText(email.body)
 
+    message.addHeader("Content-Type", "text/HTML")
+
     smtpTransport.send(message)
   }
 
