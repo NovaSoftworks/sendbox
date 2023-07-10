@@ -40,7 +40,7 @@ jobs:
     - name: Upload build
       uses: actions/upload-artifact@v3.1.2
       with:
-        name: targets
+        name: build
         path: targets.tar
     - name: Upload coverage report
       uses: actions/upload-artifact@v3.1.2
@@ -64,7 +64,7 @@ jobs:
     - name: Download build
       uses: actions/download-artifact@v3
       with:
-        name: targets.tar
+        name: build
     - name: List files in wd
       run: ls -R
     - name: Fake deploy
