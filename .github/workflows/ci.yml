@@ -62,3 +62,5 @@ jobs:
       run: ls -R
     - name: Fake deploy
       run: echo Not actually deploying...
+    - name: Print DevOps user
+      run: echo ${{ secrets.DEVOPS_USER }}
