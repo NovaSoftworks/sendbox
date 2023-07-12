@@ -4,7 +4,7 @@ ThisBuild / versionScheme := Some("semver-spec")
 
 lazy val root = (project in file(".")).settings(
   name                       := "sendbox-core",
-  version                    := "0.1-SNAPSHOT",
+  version                    := "1.0.0",
   coverageEnabled            := true,
   coverageFailOnMinimum      := true,
   coverageMinimumStmtTotal   := 70,
